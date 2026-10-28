@@ -16,13 +16,28 @@ public class CheckGuest {
         String guest = sc.nextLine().trim().replaceAll("\\s+", " ");
 
         boolean isGuestInList = false;
+        int index = 0;
+             
+        //Ciclo for
+       
+        /*
+          for (int i = 0; i < guests.length; i++) {
+          
+               if (guest.equalsIgnoreCase(guests[i])) {
+                    isGuestInList = true;
+                    break;
+                }
+         }
+         */
 
-        for (int i = 0; i < guests.length; i++) {
+         // Ciclo while
 
-            if (guest.equalsIgnoreCase(guests[i])) {
+        while (!isGuestInList && index < guests.length) {
+
+            if (guest.equalsIgnoreCase(guests[index])) {
                 isGuestInList = true;
-                break;
             }
+            index++;
         }
 
         if (isGuestInList) {
